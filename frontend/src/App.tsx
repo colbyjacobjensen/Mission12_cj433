@@ -336,6 +336,17 @@ function Heading() {
   );
 }
 
+// Footing that links user to the ESPN bracket
+function Footing() {
+  return (
+    <div>
+      <p>
+        For more information about March Madness and to view bracket results, please visit <a href="https://www.espn.com/mens-college-basketball/" target="_blank" rel="noreferrer noopener">ESPN</a>
+      </p>
+    </div>
+  )
+}
+
 // Team card containing school info
 class Team extends React.Component <{school:string; name:string; city:string; state:string}> {
   render () {
@@ -368,11 +379,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* Component 1 */}
         <Heading/>
       </header>
       <body>
+        {/* Component 2 */}
         <SchoolList/>
       </body>
+      <footer className='App-footer'>
+        {/* Component 3 */}
+        <Footing/>
+      </footer>
     </div>
   );
 }
